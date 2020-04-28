@@ -1,37 +1,13 @@
 $(document).ready(function () {
 
-    $('.main_btna').on('click', function () {
-        $('.overlay').fadeIn('fast', function () {
-            $('.modal').slideDown('slow', function () {
-                $(this).css('display', 'block');
-            });
-        });
-    });
-    $('.main_btn').on('click', function () {
-        $('.overlay').fadeIn('fast', function () {
-            $('.modal').slideDown('slow', function () {
-                $(this).css('display', 'block');
-            });
-        });
-    });
-    $('.timetable').on('click', function () {
-        $('.overlay').fadeIn('fast', function () {
-            $('.modal').slideDown('slow', function () {
-                $(this).css('display', 'block');
-            });
-        });
+    $('.main_btna, .main_btn, a[href="#sheldure"]').click(function () {
+        $('.overlay').fadeIn(1000);
+        $('.modal').slideDown(1000);
     });
 
-
-
-    $('.close').on('click', function () {
-        $('.modal').slideUp('slow', function () {
-            $(this).css('display', 'none', function () {
-                $('.overlay').fadeOut();
-            });
-        });
-
-        $('.overlay').fadeIn().fadeOut();
+    $('.close').click(function () {
+        $('.modal').slideUp(1000);
+        $('.overlay').fadeOut(1000);
     });
 
 });
